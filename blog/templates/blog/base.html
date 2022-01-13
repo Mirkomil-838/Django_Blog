@@ -34,7 +34,7 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-                <a href="{% url 'blog-home' %}">Django Blog</a>
+                <a href="{% url 'blog-home' %}">Bosh Sahifa</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
                     aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -46,8 +46,10 @@
                         <a href="{% url 'blog-about'  %}" class="nav-item nav-link">About</a>
                     </div>
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="#">Home</a>
-                        <a href="#" class="nav-item nav-link">About</a>
+                        <a class="nav-item nav-link" href="{% url 'post-create'  %}">Yangi Post Qo'yish</a>
+                        <a href="{% url 'register'  %}" class="nav-item nav-link">Registratsiya</a>
+<a href="{% url 'profile'  %}" class="nav-item nav-link" style="margin-top: -4px;">Profile <img style="height: 40px;width: 40px;" class="rounded-circle" src="{{ user.profile.image.url}}"></a>
+<a href="{% url 'logout'  %}" class="nav-item nav-link">Profildan Chiqish</a>
                     </div>
                 </div>
             </div>
